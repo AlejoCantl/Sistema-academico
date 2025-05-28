@@ -1,0 +1,66 @@
+.iconContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-self: end;
+  position: relative;
+  margin-right: 10px;
+  background-color: white;
+  border: 1px solid #e5e7eb; 
+  border-radius: 9999px; 
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.iconContainer:hover {
+  background-color: #f3f4f6;
+}
+
+.icon {
+  color: #374151;
+  width: 20px;
+  height: 20px;
+    transition: color 0.2s ease;
+}
+
+.MenuList {
+  position: absolute;
+  top: 40px;
+  right: 0;
+  background-color: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.08);
+  padding: 8px 0;
+  min-width: 180px;
+  z-index: 50;
+  animation: fadeIn 0.2s ease-out;
+}
+
+.MenuItem {
+  display: flex;
+  align-items: center;
+  padding: 10px 16px;
+  font-size: 14px;
+  color: #374151;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.15s ease;
+}
+
+.MenuItem:hover {
+  background-color: #f9fafb;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

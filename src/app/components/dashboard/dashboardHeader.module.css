@@ -1,0 +1,17 @@
+.dashContainer{
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    align-items: center;
+    justify-content: center;
+    background-color: #f0f4f8; /* light background */
+    padding: 5px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.dashTitle{
+    font-size: 24px;
+    font-weight: 600;
+    color: #333;
+    text-align: center;
+}
