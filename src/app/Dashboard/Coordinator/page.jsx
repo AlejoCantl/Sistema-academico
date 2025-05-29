@@ -1,7 +1,72 @@
+import Button from "@/app/components/Button";
 export default function CoordinadorPage() {
     return (
       <div>
-      </div>
-    );
-  }
-  
+            <h1 style={{fontSize:"36px", color:"#2E71BD", textAlign:"center"}}>Carga academica</h1>
+            <label style={{fontSize:"18px", color:"#757575", marginLeft:"50px"}}>Asignar materias a docentes</label>
+      
+            {/* Contenedor que organiza inputs y botones en fila */}
+            <div style={{ display: "flex", 
+              flexDirection: "row", 
+              gap: "40px", 
+              marginLeft:"20px", 
+              marginTop:"30px" }}>
+      
+              {/* Contenedor de inputs */}
+              <div style={{ display:"flex", 
+                flexWrap:"wrap", 
+                gap:"40px", 
+                maxWidth:"600px" }}>
+                
+               
+                <div style={{display:"flex", flexDirection:"column", marginBottom:"10px"}}>
+                  <label style={{marginBottom:"10px"}}>Corte</label>
+                  <select name="select" style={{backgroundColor:"#2E71BD", border:"none", padding:"12px", color:"#fff", outline:"none", borderRadius:"15px", width:"250px"}}>
+                    <option>Selecciona una opcion</option>
+                    <option value="value1">Corte 1</option>
+                    <option value="value2">Corte 2</option>
+                    <option value="value3">Corte 3</option>
+                    <option value="value4">Corte 4</option>
+                  </select>
+                </div>
+                {/* Los otros selects similares aquí */}
+                <div style={{display:"flex", flexDirection:"column", marginBottom:"10px"}}>
+                  <label style={{marginBottom:"10px"}}>Profesor</label>
+                  <select name="select" style={{backgroundColor:"#2E71BD", border:"none", padding:"12px", color:"#fff", outline:"none", borderRadius:"15px", width:"250px"}}>
+                    <option>Selecciona una opcion</option>
+                    <option value="value1">Junior Gutierrez</option>
+                    <option value="value2">Matthews Gomez</option>
+                    <option value="value3">Emmanuel Fajardo</option>
+                    <option value="value4">Alejandro Cantillo</option>
+                  </select>
+                </div>
+                <div style={{display:"flex", flexDirection:"column", marginBottom:"10px"}}>
+                  <label style={{marginBottom:"10px"}}>Programa</label>
+                  <select name="select" style={{backgroundColor:"#2E71BD", border:"none", padding:"12px", color:"#fff", outline:"none", borderRadius:"15px", width:"250px"}}>
+                    <option>Selecciona una opcion</option>
+                    <option value="value1">Matematicas</option>
+                    <option value="value2">Español</option>
+                    <option value="value3">Quimica</option>
+                    <option value="value4">Fisica</option>
+                  </select>
+                </div>
+                <div style={{display:"flex", flexDirection:"column", marginBottom:"10px"}}>
+                  <label style={{marginBottom:"10px"}}>Salon</label>
+                  <select name="select" style={{backgroundColor:"#2E71BD", border:"none", padding:"12px", color:"#fff", outline:"none", borderRadius:"15px", width:"250px"}}>
+                    <option>Selecciona una opcion</option>
+                    <option value="value1">A201</option>
+                    <option value="value2">A202</option>
+                  </select>
+                </div>
+              </div>
+      
+              {/* Contenedor de botones */}
+              <div style={{ display: "flex", flexDirection: "column", gap: "10px", marginTop: "0" }}>
+                <Button label="Subir" color="#2E71BD" />
+                
+              </div>
+            </div>
+          </div>
+        );
+      }
+      
