@@ -1,0 +1,18 @@
+.dashboardContainer {
+    max-width: 1200px;
+    width: 85%;
+    height: 70vh;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    padding: 32px;
+    margin: 40px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    z-index: 50;
+}
+
+.dashboardContainer{
+    background-color: #FFFFFF;
+}
+

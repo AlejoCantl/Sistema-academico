@@ -53,6 +53,10 @@
 .MenuItem:hover {
   background-color: #f9fafb;
 }
+.profileImage {
+    border-radius: 50%;
+    object-fit: cover;
+}
 
 @keyframes fadeIn {
   from {
