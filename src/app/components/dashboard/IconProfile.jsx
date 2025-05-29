@@ -4,19 +4,19 @@ import useToggleWithOutsideClick from './useToggleOutsideClick';
 import NavigationOptions from './NavigationOptions';
 import Image from 'next/image';
 
-export default function IconProfile({ userProfile }) {
+export default function IconProfile( ) {
     const { ref: iconRef, isOpen: iconOpen, toggle: toggleIcon } = useToggleWithOutsideClick(false);
 
-    const imageUrl = userProfile?.image || userProfile?.photoURL;
+    const imageUrl = 'imagenes/perfil.png';
 
     return (
         <div className={styles.iconContainer} ref={iconRef} onClick={toggleIcon}>
             {imageUrl ? (
                 <Image
-                    src={imageUrl}
+                    src="/imagenes/perfil.png"
                     alt="User Profile"
-                    width={40}
-                    height={40}
+                    width={70}
+                    height={100}
                     className={styles.profileImage}
                 />
             ) : (
@@ -27,10 +27,8 @@ export default function IconProfile({ userProfile }) {
                 <div className={styles.iconMenu}>
                     <NavigationOptions
                         options={[
-                            { href: '/Dashboard/Student', label: 'Estudiantes', icon: null },
-                            { href: '/Dashboard/Admin', label: 'Administrador', icon: null },
-                            { href: '/Dashboard/Teacher', label: 'Docentes', icon: null },
-                            { href: '/Dashboard/Coordinator', label: 'Materias', icon: null },
+                            { href: '/', label: 'Salir', icon: null },
+                            
                         ]}
                         classNameList={styles.MenuList}
                         classNameItem={styles.MenuItem}
