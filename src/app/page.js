@@ -1,18 +1,24 @@
-"use client";
+'use client'; // Esto es necesario en Next.js App Router para componentes cliente
 
 import { useState } from "react";
+import { useRouter } from "next/navigation";
 
 export default function LoginPage() {
+  const router = useRouter();
+
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Aquí puedes hacer la validación o redirección
+
+    // Aquí puedes hacer la validación o autenticación real
+
     console.log("Email:", email);
     console.log("Password:", password);
-    // Ejemplo: después de validar las credenciales
-    router.push("/administrador"); // o '/docente', '/estudiante', etc.
+
+    // Luego rediriges al dashboard admin
+    router.push("/Dashboard/Admin");
   };
 
   return (
