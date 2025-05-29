@@ -1,24 +1,35 @@
-'use client'; // Esto es necesario en Next.js App Router para componentes cliente
+'use client'; 
 
 import { useState } from "react";
-import { useRouter } from "next/navigation";
+
+import { useRouter } from "next/navigation"; 
+
+const users = [
+  { email: "admin@example.com", password: "admin123", route: "/Dashboard/Admin" },
+  { email: "coordinator@example.com", password: "coord123", route: "/Dashboard/Coordinator" },
+  { email: "student@example.com", password: "student123", route: "/Dashboard/Student" },
+  { email: "teacher@example.com", password: "teacher123", route: "/Dashboard/Teacher" },
+];
 
 export default function LoginPage() {
-  const router = useRouter();
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [error, setError] = useState("");
+  const router = useRouter();
 
+  
   const handleSubmit = (e) => {
     e.preventDefault();
-
-    // Aquí puedes hacer la validación o autenticación real
-
-    console.log("Email:", email);
-    console.log("Password:", password);
-
-    // Luego rediriges al dashboard admin
-    router.push("/Dashboard/Admin");
+    const user = users.find(
+      (u) => u.email === email && u.password === password
+    );
+    if (user) {
+      setError("");
+      router.push(user.route);
+    } else {
+      setError("Usuario o contraseña incorrectos");
+    }
   };
 
   return (
@@ -27,7 +38,7 @@ export default function LoginPage() {
       <form onSubmit={handleSubmit}>
         <input
           type="email"
-          placeholder="Correo"
+          placeholder="email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           required
@@ -45,6 +56,7 @@ export default function LoginPage() {
         <br />
         <button type="submit">Ingresar</button>
       </form>
+      {error && <p style={{ color: "red" }}>{error}</p>}
     </div>
   );
 }
