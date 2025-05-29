@@ -1,7 +1,7 @@
 'use client'; 
 
 import { useState } from "react";
-
+import styles from './page.module.css';
 import { useRouter } from "next/navigation"; 
 
 const users = [
@@ -33,10 +33,11 @@ export default function LoginPage() {
   };
 
   return (
-    <div style={{ padding: "2rem" }}>
-      <h1>Iniciar Sesión</h1>
-      <form onSubmit={handleSubmit}>
+    <div className={styles.container}>
+      <form onSubmit={handleSubmit} className={styles.form}>
+        <h1 className={styles.Login}>Iniciar Sesión</h1>
         <input
+          className={styles.input}
           type="email"
           placeholder="email"
           value={email}
@@ -46,6 +47,7 @@ export default function LoginPage() {
         <br />
         <br />
         <input
+          className={styles.input}
           type="password"
           placeholder="Contraseña"
           value={password}
@@ -54,7 +56,7 @@ export default function LoginPage() {
         />
         <br />
         <br />
-        <button type="submit">Ingresar</button>
+        <button type="submit" className={styles.button}>Ingresar</button>
       </form>
       {error && <p style={{ color: "red" }}>{error}</p>}
     </div>
