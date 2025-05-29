@@ -1,4 +1,5 @@
 import { Roboto } from "next/font/google";
+import styles from "./dashboard.module.css";
 import DashboardHeader from "../components/dashboard/DashboardHeader";
 const roboto = Roboto({
     subsets: ["latin"],
@@ -14,9 +15,13 @@ export const metadata = {
 
 export default function DashboardLayout({ children }) {
     return (
-        <main className={`${roboto.variable}`}>
-            <DashboardHeader/>
+        <>
+        <DashboardHeader/>
+        <main className={`${roboto.variable} ${styles.mainContainer}`}>
+            <div className={styles.dashboardContainer}>
             {children}
+            </div>
         </main>
+        </>
     );
 }
