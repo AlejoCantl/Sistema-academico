@@ -25,7 +25,7 @@ const data = [
 export default function DocentePage() {
     return (
       <>
-      <h2 style={{ textAlign: 'center', marginBottom: '0.1rem' }}>Clases asignadas</h2>
+      <h2 style={{ textAlign: 'center', marginBottom: '0.1rem', color: '#2E71BD' }}>Clases asignadas</h2>
       <div style={{
       maxWidth: '100%',
       overflowX: 'auto',
