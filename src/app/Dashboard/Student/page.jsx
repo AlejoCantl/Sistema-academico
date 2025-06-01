@@ -9,7 +9,7 @@ export default function EstudiantePage() {
           color: "#2E71BD",
         }}
       >
-        Clases asignadas
+        Horario Academico
       </h2>
       <div
         style={{
