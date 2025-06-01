@@ -33,6 +33,7 @@ export default function DashboardHeader() {
         "Teacher": "Docente",
         "Coordinator": "Coordinador",
         "Calificaciones": "Calificaciones",
+        "Asistencias": "Asistencias",
     }
     // Si el DashBoardView no está en el mapa, se puede manejar como un caso especial
     if (!DashBoardViewMap[DashBoardView]) {
