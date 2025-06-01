@@ -1,7 +1,26 @@
+import Calendar from "@/app/components/student/Calendar";
 export default function EstudiantePage() {
   return (
-    <div>
-      <h1>hola soy la vista de estudiante</h1>
-    </div>
+    <>
+      <h2
+        style={{
+          textAlign: "center",
+          marginBottom: "0.1rem",
+          color: "#2E71BD",
+        }}
+      >
+        Clases asignadas
+      </h2>
+      <div
+        style={{
+          maxWidth: "100%",
+          overflowX: "auto",
+          padding: "1rem",
+          boxSizing: "border-box",
+        }}
+      >
+        <Calendar />
+      </div>
+    </>
   );
 }
