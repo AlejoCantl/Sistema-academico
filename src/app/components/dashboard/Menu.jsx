@@ -35,12 +35,12 @@ export default function Menu() {
 
     return (
         <div className={styles.Container} ref={menuRef}>
-            <div onClick={toggleGrid} className={`${styles.GridButton} ${GridOpen ? styles.active : ''}`}>
+            <div onMouseEnter={toggleGrid} className={`${styles.GridButton} ${GridOpen ? styles.active : ''}`}>
                 <Grip className="h-6 w-6" />
             </div>
 
             {GridOpen && (
-                <div className={styles.GridMenu}>
+                <div onMouseLeave={toggleGrid} className={styles.GridMenu}>
                     <NavigationOptions
                         options={NavigationOptionsMap[DashBoardView] || []}
                         classNameList={styles.MenuList}
