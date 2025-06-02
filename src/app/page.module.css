@@ -1,15 +1,15 @@
 
 .container{
     display: flex;
-    padding: 0;
     margin: 0;
     flex-direction: column;
     justify-content: center;
-    height: 100vh;
+    min-height: 100vh;
     background-image: url('components/images/3e563121e13b208489eb1874a100de78580effcb.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 .form{
@@ -18,7 +18,7 @@
     height: 18rem;
     width: 20rem;
     border-radius: 1rem;
-    left: 5rem; 
+    left: 4rem;
     top: 1rem;
     position: relative;
 }
