@@ -10,7 +10,7 @@ export default function IconProfile( ) {
     const imageUrl = 'imagenes/perfil.png';
 
     return (
-        <div className={styles.iconContainer} ref={iconRef} onClick={toggleIcon}>
+        <div className={styles.iconContainer} ref={iconRef} onMouseEnter={toggleIcon}>
             {imageUrl ? (
                 <Image
                     src="/imagenes/perfil.png"
@@ -24,7 +24,7 @@ export default function IconProfile( ) {
             )}
             
             {iconOpen && (
-                <div className={styles.iconMenu}>
+                <div onMouseLeave={toggleIcon} className={styles.iconMenu}>
                     <NavigationOptions
                         options={[
                             { href: '/', label: 'Salir', icon: null },
