@@ -1,4 +1,4 @@
-import UploadExcel from "@/app/components/calificaciones/UploadExcel.jsx";
+import UploadExcel from "@/app/components/calificaciones/UploadExcel";
 import Button from "@/app/components/Button";
 export default function CalificacionesPage() {
     return (
